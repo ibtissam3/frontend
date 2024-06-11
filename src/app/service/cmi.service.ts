@@ -10,7 +10,7 @@ import { Impaye } from '../modals/impaye';
   providedIn: 'root'
 })
 export class CmiService {
-  private apiUrl = 'http://localhost:8080/cmi'; // Replace with your API URL
+  private apiUrl = 'http://localhost:8081/cmi'; // Replace with your API URL
 
   constructor(private http: HttpClient) { }
 

@@ -7,7 +7,7 @@ import { Agent } from '../modals/agent';
   providedIn: 'root'
 })
 export class AdminService {
-  private apiUrl = 'http://localhost:8080/api/admin'; // Remplacez par l'URL de votre API
+  private apiUrl = 'http://localhost:8081/api/admin'; // Remplacez par l'URL de votre API
 
   constructor(private http: HttpClient) { }
 
