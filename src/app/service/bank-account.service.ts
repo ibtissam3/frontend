@@ -7,7 +7,7 @@ import { BankAccount } from '../modals/bank_account';
   providedIn: 'root'
 })
 export class BankAccountService {
-  private apiUrl = 'http://localhost:8080/bankAccounts'; // Replace with your API URL
+  private apiUrl = 'http://localhost:8081/bankAccounts'; // Replace with your API URL
 
   constructor(private http: HttpClient) { }
 

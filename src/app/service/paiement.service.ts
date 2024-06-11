@@ -8,7 +8,7 @@ import { Transaction } from '../modals/transaction';
   providedIn: 'root'
 })
 export class PaiementService {
-  private apiUrl = 'http://localhost:8080/api/paiement'; // Replace with your API URL
+  private apiUrl = 'http://localhost:8081/api/paiement'; // Replace with your API URL
 
   constructor(private http: HttpClient) { }
 

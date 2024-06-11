@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ImpayeService {
-  private apiUrl = 'http://localhost:8080/impayes/'; // Replace with your API URL
+  private apiUrl = 'http://localhost:8081/impayes/'; // Replace with your API URL
 
   constructor(private http: HttpClient) { }
 

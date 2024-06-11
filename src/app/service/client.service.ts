@@ -8,7 +8,7 @@ import { Client } from '../modals/client';
   providedIn: 'root'
 })
 export class ClientService {
-  private apiUrl = 'http://localhost:8080/api/client'; // Replace with your API URL
+  private apiUrl = 'http://localhost:8081/api/client'; // Replace with your API URL
 
   constructor(private http: HttpClient) { }
 

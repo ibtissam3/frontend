@@ -9,7 +9,7 @@ import {Transaction} from "../modals/transaction";
 })
 export class TransactionService {
 
-  private apiUrl = 'http://localhost:8080/api';
+  private apiUrl = 'http://localhost:8081/api';
 
   constructor(private http: HttpClient) { }
 

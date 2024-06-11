@@ -9,7 +9,7 @@ import { PaymentAccountCreationRequest } from '../modals/paymentaccountcreaction
   providedIn: 'root'
 })
 export class ComptePaiementService {
-  private apiUrl = 'http://localhost:8080/api/payment-accounts'; // Replace with your API URL
+  private apiUrl = 'http://localhost:8081/api/payment-accounts'; // Replace with your API URL
 
   constructor(private http: HttpClient) { }
 
