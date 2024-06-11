@@ -1,0 +1,83 @@
+<h1 style="color:#3c76b9">Vos Transactions : </h1>
+<div class="graph-wrapper">
+  <div class="chart-container">
+    <div class="base"></div>
+    <!-- Left Side Meter-->
+    <ul class="meter">
+      <li><div>$100,000</div></li>
+      <li><div>$80,000</div></li>
+      <li><div>$60,000</div></li>
+      <li><div>$40,000</div></li>
+      <li><div>Moins de $20,000</div></li>
+    </ul>
+    <!-- Background-Grid -->
+    <table>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+    <!-- End Background Grid -->
+
+    <div class="bar incoming" [style.height]="incomingHeight"></div>
+    <div class="bar outgoing" [style.height]="outgoingHeight"></div>
+  </div>
+
+  <!-- Legend -->
+  <div class="legend">
+    <div class="legend-item">
+      <div class="color-box incoming"></div>
+      <span>Incoming Transactions</span>
+    </div>
+    <div class="legend-item">
+      <div class="color-box outgoing"></div>
+      <span>Outgoing Transactions</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<h2 style="text-align: center;" > Paiement des factures </h2>
+<br>
+<br>
+<br>
+<br>
+
+<mat-card-content>
+    <form class="container flex">
+<mat-form-field appearance="fill">
+    <mat-label>Sélectionner un produit</mat-label>
+    <mat-select id="productSelect">
+      <mat-option value="1">Hssab 1 - Plafond: 200 DH</mat-option>
+      <!-- Ajoutez d'autres options ici -->
+    </mat-select>
+  </mat-form-field>
+    </form>
+</mat-card-content>
+
+<mat-card class="container">
+  <div class="card-row" *ngFor="let creditor of creanciers">
+    <mat-card class="inner-card">
+        <img [src]="creditor.image">
+        <p style="text-align: center;">{{creditor.creditorName}}</p>
+        <ul>
+          <li *ngFor="let debt of creditor.listCreances">{{debt.debtName}}</li>
+        </ul>
+    </mat-card>
+  </div>
+</mat-card>

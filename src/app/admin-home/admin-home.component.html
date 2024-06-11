@@ -1,0 +1,112 @@
+<div class="wrapper">
+    <aside id="sidebar" [class.expand]="isExpanded">
+      <div class="d-flex">
+        <button class="toggle-btn" type="button" (click)="toggleSidebar()">
+          <i class="lni lni-grid-alt"></i>
+        </button>
+        <div class="sidebar-logo">
+          <a href="#">Main dashboard</a>
+        </div>
+      </div>
+      <ul class="sidebar-nav">
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link">
+            <i class="bi bi-person-fill-add"></i>
+            <span>Ajouter un agent</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link">
+            <i class="bi bi-arrow-counterclockwise"></i>
+            <span>Historique</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link">
+            <i class="bi bi-calendar-minus-fill"></i>
+            <span>Historique</span>
+          </a>
+        </li>
+  
+  <!--      <li class="sidebar-item">-->
+  <!--        <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"-->
+  <!--           [attr.data-bs-target]="'#auth'" aria-expanded="false" aria-controls="auth">-->
+  <!--          <i class="bi bi-calendar-minus-fill"></i>-->
+  <!--          <span>Demande</span>-->
+  <!--        </a>-->
+  <!--        <ul id="auth" class="sidebar-dropdown list-unstyled collapse">-->
+  <!--          <li class="sidebar-item">-->
+  <!--            <a href="#" class="sidebar-link" routerLink="/bill">Effectuer un paiement</a>-->
+  <!--          </li>-->
+  <!--          <li class="sidebar-item">-->
+  <!--            <a href="#" class="sidebar-link">Autre shose</a>-->
+  <!--          </li>-->
+  <!--        </ul>-->
+  <!--      </li>-->
+  <!--      <li class="sidebar-item">-->
+  <!--        <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"-->
+  <!--           [attr.data-bs-target]="'#multi'" aria-expanded="false" aria-controls="multi">-->
+  <!--          <i class="lni lni-layout"></i>-->
+  <!--          <span>Multi Level</span>-->
+  <!--        </a>-->
+  <!--        <ul id="multi" class="sidebar-dropdown list-unstyled collapse">-->
+  <!--          <li class="sidebar-item">-->
+  <!--            <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"-->
+  <!--               [attr.data-bs-target]="'#multi-two'" aria-expanded="false" aria-controls="multi-two">-->
+  <!--              Two Links-->
+  <!--            </a>-->
+  <!--            <ul id="multi-two" class="sidebar-dropdown list-unstyled collapse">-->
+  <!--              <li class="sidebar-item">-->
+  <!--                <a href="#" class="sidebar-link">Link 1</a>-->
+  <!--              </li>-->
+  <!--              <li class="sidebar-item">-->
+  <!--                <a href="#" class="sidebar-link">Link 2</a>-->
+  <!--              </li>-->
+  <!--            </ul>-->
+  <!--          </li>-->
+  <!--        </ul>-->
+  <!--      </li>-->
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link">
+            <i class="lni lni-popup"></i>
+            <span>Notification</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link">
+            <i class="lni lni-cog"></i>
+            <span>Setting</span>
+          </a>
+        </li>
+      </ul>
+      <div class="sidebar-footer">
+        <a href="#" class="sidebar-link">
+          <i class="lni lni-exit"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+    <div class="main p-3">
+      <div class="text-center">
+        <div class="admin-content">
+          <h1>Bienvenue, Administrateur</h1>
+          <div class="dashboard-cards">
+            <mat-card class="dashboard-card">
+              <mat-card-title>Nombre Total d'Utilisateurs</mat-card-title>
+              <mat-card-content>1,234</mat-card-content>
+            </mat-card>
+            <mat-card class="dashboard-card">
+              <mat-card-title>Nombre Total de Transactions</mat-card-title>
+              <mat-card-content>5,678</mat-card-content>
+            </mat-card>
+            <mat-card class="dashboard-card">
+              <mat-card-title>Revenu Total</mat-card-title>
+              <mat-card-content>12,345 €</mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  

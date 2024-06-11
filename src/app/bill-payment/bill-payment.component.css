@@ -1,0 +1,288 @@
+/*!*.container {*!*/
+/*!*  width: 80%;*!*/
+/*!*  margin: 20px auto;*!*/
+/*!*  padding: 20px;*!*/
+/*!*  background-color: #fff;*!*/
+/*!*  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*!*/
+/*!*}*!*/
+
+/*!*mat-card-title {*!*/
+/*!*  font-size: 1.5em;*!*/
+/*!*  margin-bottom: 20px;*!*/
+/*!*}*!*/
+
+/*!*.filter {*!*/
+/*!*  margin-bottom: 20px;*!*/
+/*!*}*!*/
+
+/*!*.creditors-list {*!*/
+/*!*  display: flex;*!*/
+/*!*  flex-wrap: wrap;*!*/
+/*!*  gap: 20px;*!*/
+/*!*}*!*/
+
+/*!*.creditor-card {*!*/
+/*!*  flex: 1 1 calc(33% - 20px);*!*/
+/*!*  box-sizing: border-box;*!*/
+/*!*}*!*/
+
+/*!*mat-card {*!*/
+/*!*  height: 100%;*!*/
+/*!*  display: flex;*!*/
+/*!*  flex-direction: column;*!*/
+/*!*  align-items: center;*!*/
+/*!*}*!*/
+
+/*!*mat-card img {*!*/
+/*!*  width: 100px;*!*/
+/*!*  height: 100px;*!*/
+/*!*  object-fit: contain;*!*/
+/*!*  margin-top: 10px;*!*/
+/*!*}*!*/
+
+/*!*mat-card-content {*!*/
+/*!*  text-align: center;*!*/
+/*!*}*!*/
+/*.parent {*/
+/*  display: flex;*/
+/*  flex-wrap: wrap; !* Permet d'ajuster les cartes si l'espace n'est pas suffisant sur une seule ligne *!*/
+/*  justify-content: space-around; !* Espace les cartes de manière uniforme *!*/
+/*  width: 100%; !* Pour que le conteneur prenne toute la largeur *!*/
+/*  padding: 20px;*/
+/*  perspective: 1000px;*/
+/*}*/
+
+/*.card {*/
+/*  flex: 0 1 300px; !* 0 signifie que l'élément ne s'agrandit pas, 1 signifie qu'il se réduit si nécessaire, 300px est la largeur de base *!*/
+/*  padding-top: 50px;*/
+/*  border: 3px solid #ffff; !* Utiliser la couleur blanche pour la bordure *!*/
+/*  transform-style: preserve-3d;*/
+/*  background: #697386; !* Utiliser #697386 pour le fond principal *!*/
+/*  box-shadow: rgba(142, 142, 142, 0.3) 0px 30px 30px -10px;*/
+/*  transition: all 0.5s ease-in-out;*/
+/*  position: relative; !* Nécessaire pour positionner correctement le .date-box *!*/
+/*  margin: 10px; !* Pour ajouter de l'espace entre les cartes *!*/
+/*}*/
+
+/*.card:hover {*/
+/*  background-color: #697386;*/
+/*  transform: rotate3d(0.5, 1, 0, 30deg);*/
+/*}*/
+
+/*.content-box {*/
+/*  background: #697386; !* Utiliser #697386 pour le fond de la boîte de contenu *!*/
+/*  transition: all 0.5s ease-in-out;*/
+/*  padding: 60px 25px 25px 25px;*/
+/*  transform-style: preserve-3d;*/
+/*}*/
+
+/*.content-box .card-title {*/
+/*  display: inline-block;*/
+/*  color: #ffff; !* Utiliser #ffff pour le texte *!*/
+/*  font-size: 25px;*/
+/*  font-weight: 900;*/
+/*  transition: all 0.5s ease-in-out;*/
+/*  transform: translate3d(0px, 0px, 50px);*/
+/*}*/
+
+/*.content-box .card-title:hover {*/
+/*  transform: translate3d(0px, 0px, 60px);*/
+/*}*/
+
+/*.content-box .card-content {*/
+/*  margin-top: 10px;*/
+/*  font-size: 12px;*/
+/*  font-weight: 700;*/
+/*  color: #ffff; !* Utiliser #ffff pour le texte *!*/
+/*  transition: all 0.5s ease-in-out;*/
+/*  transform: translate3d(0px, 0px, 30px);*/
+/*}*/
+
+/*.content-box .card-content:hover {*/
+/*  transform: translate3d(0px, 0px, 60px);*/
+/*}*/
+
+/*.content-box .see-more {*/
+/*  cursor: pointer;*/
+/*  margin-top: 1rem;*/
+/*  display: inline-block;*/
+/*  font-weight: 900;*/
+/*  font-size: 9px;*/
+/*  text-transform: uppercase;*/
+/*  color: #697386; !* Utiliser #697386 pour le texte du bouton *!*/
+/*  background: #ffff; !* Utiliser #ffff pour le fond du bouton *!*/
+/*  padding: 0.5rem 0.7rem;*/
+/*  transition: all 0.5s ease-in-out;*/
+/*  transform: translate3d(0px, 0px, 20px);*/
+/*}*/
+
+/*.content-box .see-more:hover {*/
+/*  transform: translate3d(0px, 0px, 60px);*/
+/*}*/
+
+/*.date-box {*/
+/*  position: absolute;*/
+/*  top: 30px;*/
+/*  right: 30px;*/
+/*  height: 80px;*/
+/*  width: 80px;*/
+/*  background: #ffff; !* Utiliser #ffff pour le fond de la boîte de date *!*/
+/*  border: 1px solid #697386; !* Utiliser #697386 pour la bordure *!*/
+/*  padding: 10px;*/
+/*  transform: translate3d(0px, 0px, 80px);*/
+/*  box-shadow: rgba(100, 100, 111, 0.2) 0px 17px 10px -10px;*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*}*/
+
+/*.date-box img {*/
+/*  max-width: 100%;*/
+/*  max-height: 100%;*/
+/*  object-fit: cover;*/
+/*}*/
+
+/*.card-container {*/
+/*  display: flex;*/
+/*  flex-wrap: wrap;*/
+/*  justify-content: center;*/
+/*}*/
+
+/*.card {*/
+/*  width: 18rem;*/
+/*  margin: 10px;*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  justify-content: space-between;*/
+/*  align-items: center;*/
+/*}*/
+
+/*.card-img-top {*/
+/*  width: 100%;*/
+/*  height: auto;*/
+/*  max-height: 150px; !* Adjust as necessary *!*/
+/*  object-fit: contain; !* Ensures the image fits within the specified area *!*/
+/*}*/
+
+/*.card-body {*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  justify-content: space-between;*/
+/*  align-items: center;*/
+/*  text-align: center;*/
+/*  height: 100%;*/
+/*}*/
+
+/*.card-text {*/
+/*  margin-bottom: auto;*/
+/*}*/
+
+/*.card .btn {*/
+/*  margin-top: 10px;*/
+/*}*/
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+mat-card.container {
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+mat-card-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #343a40;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.mat-tab-group {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.mat-tab-labels {
+  justify-content: center;
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+mat-form-field {
+  width: 200px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  width: 18rem;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  max-height: 150px; /* Adjust as necessary */
+  object-fit: contain; /* Ensures the image fits within the specified area */
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  padding: 10px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #343a40;
+  margin: 10px 0;
+}
+
+.card-text {
+  margin-bottom: auto;
+}
+
+.btn {
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}

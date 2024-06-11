@@ -1,0 +1,70 @@
+<br>
+<br>
+<br>
+
+<mat-card class="container">
+    <mat-card-title style="text-align: center;">Effectuer un paiement</mat-card-title>
+    <mat-card-content>
+      <form *ngIf="type=='DONATION'" class="container flex">
+        <img [src]="this.imagePath" alt="Description de l'image" class="image-left">
+        <div class="client-info">
+          <mat-form-field appearance="fill" class="full-width ">
+            <mat-label>Votre Id Client </mat-label>
+            <input matInput id="number"  [(ngModel)]="tel" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="full-width ">
+            <mat-label>Nom et Prénom du donateur</mat-label>
+            <input matInput id="fullname"  [(ngModel)]="fullname" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Montant du don (DHS)</mat-label>
+            <input matInput id="montant"  [(ngModel)]="montant" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+        </div>
+        <div style="text-align: center;">
+        <button mat-raised-button color="danger" class="margin-right" (click)="donation()"> ✓ Valider</button>
+        <button mat-raised-button color="warn"> ✗ Annuler </button>
+    </div>
+      </form>
+      <form *ngIf="type=='RECHARGE'" class="container flex">
+        <img [src]="this.imagePath" alt="Description de l'image" class="image-left">
+        <div class="client-info">
+          <mat-form-field appearance="fill" class="full-width ">
+            <mat-label>Id Client </mat-label>
+            <input matInput id="number"  [(ngModel)]="tel" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="full-width ">
+            <mat-label>Numero</mat-label>
+            <input matInput id="number"  [(ngModel)]="tel_recharge" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Montant de la recharge</mat-label>
+            <mat-select [(value)]="montant">
+              <mat-option value="10">10 DHS</mat-option>
+              <mat-option value="20">20 DHS</mat-option>
+              <mat-option value="50">50 DHS</mat-option>
+              <mat-option value="100">100 DHS</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div style="text-align: center;">
+        <button mat-raised-button color="danger" class="margin-right" (click)="recharge()"> ✓ Recharge</button>
+        <button mat-raised-button color="warn"> ✗ Annuler </button>
+    </div>
+      </form>
+      <form *ngIf="type=='FACTURE'" class="container flex">
+        <img [src]="this.imagePath" alt="Description de l'image" class="image-left">
+        <div class="client-info">
+          <mat-form-field appearance="fill" class="full-width ">
+            <mat-label>Id Client </mat-label>
+            <input matInput id="number"  [(ngModel)]="tel" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+        </div>
+        <div style="text-align: center;">
+        <button mat-raised-button color="danger" class="margin-right" [routerLink]="['/impaye',id_client,id]"> ✓ Valider</button>
+        <button mat-raised-button color="warn"> ✗ Annuler </button>
+    </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+  

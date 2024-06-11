@@ -1,0 +1,68 @@
+<div class="contact-form">
+  <h2>Entrer Les Informations Clients</h2>
+  <p>Veuillez entrer tous les champs sans exception</p>
+  <form (ngSubmit)="create()">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" [(ngModel)]="client.lastName" name="lastName" required>
+      </div>
+      <div class="form-group">
+        <label for="prenom">Prénom</label>
+        <input type="text" id="prenom" [(ngModel)]="client.firstName" name="firstName" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="produit">Sélectionner un produit</label>
+      <select id="produit" [(ngModel)]="client.cin" name="cin" required>
+        <option value="" disabled selected>Choisissez un produit</option>
+        <option value="CIN">Produit 1</option>
+        <option value="Passport">Carte d'Identité</option>
+        <option value="produit3">Passport</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="piece_identite">N° Pièce d'identité</label>
+      <input type="text" id="piece_identite" [(ngModel)]="client.num_piece_identite" name="identityNumber" required>
+    </div>
+    <div class="form-group">
+      <label for="date_naissance">jj/mm/aaaa Date de naissance</label>
+      <input type="date" id="date_naissance" [(ngModel)]="client.birthdate" name="birthDate" required>
+    </div>
+    <div class="form-group">
+      <label for="adresse">Adresse</label>
+      <input type="text" id="adresse" [(ngModel)]="client.address" name="address" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" [(ngModel)]="client.email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="confirm_email">Confirmation Email</label>
+      <input type="email" id="confirm_email" [(ngModel)]="email" name="confirmEmail" required>
+    </div>
+    <div class="form-group">
+      <label for="telephone">Numéro de téléphone</label>
+      <input type="tel" id="telephone" [(ngModel)]="client.telephone" name="phone" required>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="immatriculation">N° d'immatriculation</label>
+        <input type="text" id="immatriculation" [(ngModel)]="client.commercialRn" name="registrationNumber">
+      </div>
+      <div class="form-group">
+        <label for="patente">N° de patente</label>
+        <input type="text" id="patente" [(ngModel)]="client.patent" name="patentNumber">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea id="description" name="description" required></textarea>
+    </div>
+    <div class="full-width">
+      <label for="fileUpload">Fichier</label>
+      <input type="file" (change)="onFileSelected($event)" multiple>
+    </div>
+    <button type="submit">Suivant</button>
+  </form>
+</div>

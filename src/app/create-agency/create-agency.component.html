@@ -1,0 +1,84 @@
+<app-header></app-header>
+<mat-card class="form-container">
+  <mat-card-title>Informations personnelles</mat-card-title>
+  <mat-card-content>
+    <form>
+      <div class="form-row">
+        <mat-form-field class="form-group" appearance="fill">
+          <mat-label>Nom *</mat-label>
+          <input matInput type="text" id="nom" required>
+        </mat-form-field>
+        <mat-form-field class="form-group" appearance="fill">
+          <mat-label>Prénom *</mat-label>
+          <input matInput type="text" id="prenom" required>
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field class="form-group" appearance="fill">
+          <mat-label>Pièce d'identité *</mat-label>
+          <input matInput type="text" id="pieceIdentite" required>
+        </mat-form-field>
+        <mat-form-field class="form-group" appearance="fill">
+          <mat-label>N° pièce d'identité *</mat-label>
+          <input matInput type="text" id="numPieceIdentite" required>
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field class="form-group" appearance="fill">
+          <mat-label>Date de naissance</mat-label>
+          <input matInput type="date" id="dateNaissance">
+        </mat-form-field>
+        <mat-form-field class="form-group" appearance="fill">
+          <mat-label>Adresse *</mat-label>
+          <input matInput type="text" id="adresse" required>
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field class="form-group" appearance="fill">
+          <mat-label>Email *</mat-label>
+          <input matInput type="email" id="email" required>
+        </mat-form-field>
+        <mat-form-field class="form-group" appearance="fill">
+          <mat-label>Confirmation Email</mat-label>
+          <input matInput type="email" id="confirmationEmail">
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field class="form-group" appearance="fill">
+          <mat-label>Numéro de téléphone *</mat-label>
+          <input matInput type="tel" id="telephone" required>
+        </mat-form-field>
+        <mat-form-field class="form-group" appearance="fill">
+          <mat-label>N° d'immatriculation au registre de commerce *</mat-label>
+          <input matInput type="text" id="numImmatriculation" required>
+        </mat-form-field>
+      </div>
+      <div class="form-row">
+        <mat-form-field class="form-group" appearance="fill">
+          <mat-label>N° de patente *</mat-label>
+          <input matInput type="text" id="numPatente" required>
+        </mat-form-field>
+      </div>
+
+      <mat-card-subtitle>Pièces jointes</mat-card-subtitle>
+      <div class="form-row">
+        <mat-form-field class="form-group" appearance="fill">
+          <mat-label>Description</mat-label>
+          <input matInput type="text" id="fileDescription" placeholder="Ajouter une description">
+        </mat-form-field>
+        <div class="form-group file-upload">
+          <label for="fileUpload">Fichier</label>
+          <input type="file" id="fileUpload" style="display: none;" />
+          <div class="input-group grid">
+            <button mat-raised-button class="m-4 yellow-button" onclick="document.getElementById('fileUpload').click();">Parcourir...</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button mat-raised-button color="primary" type="submit">Enregistrer</button>
+        <button mat-button color="warn" type="button">Annuler</button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

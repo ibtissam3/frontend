@@ -1,0 +1,124 @@
+<!--<mat-card class="container">-->
+<!--    <mat-card-title>Informations Personnelles</mat-card-title>-->
+<!--    <mat-card-content>-->
+<!--      <form (ngSubmit)="create()" class="container flex">-->
+
+<!--        <div class="client-info">-->
+<!--          <mat-form-field appearance="fill" class="full-width">-->
+<!--            <mat-label>Nom</mat-label>-->
+<!--            <input matInput [(ngModel)]="agent.lastName" name="lastName">-->
+<!--          </mat-form-field>-->
+<!--          <mat-form-field appearance="fill" class="full-width">-->
+<!--            <mat-label>Prénom</mat-label>-->
+<!--            <input matInput [(ngModel)]="agent.firstName" name="firstName">-->
+<!--          </mat-form-field>-->
+<!--          <mat-form-field appearance="fill" class="full-width">-->
+<!--            <mat-label>Sélectionner un produit</mat-label>-->
+<!--            <mat-select [(ngModel)]="agent.cin" name="cin">-->
+<!--              <mat-option value="CIN">Carte d'Identité</mat-option>-->
+<!--              <mat-option value="Passport">Passport</mat-option>-->
+<!--            </mat-select>-->
+<!--          </mat-form-field>-->
+<!--          <mat-form-field appearance="fill" class="full-width">-->
+<!--            <mat-label>N° Pièce d'identité</mat-label>-->
+<!--            <input matInput [(ngModel)]="agent.num_piece_identite" name="identityNumber">-->
+<!--          </mat-form-field>-->
+<!--          <mat-form-field appearance="fill" class="full-width">-->
+<!--            <mat-label>Date de naissance</mat-label>-->
+<!--            <input matInput type="date" [(ngModel)]="agent.date_naissance" name="birthDate">-->
+<!--          </mat-form-field>-->
+<!--          <mat-form-field appearance="fill" class="full-width">-->
+<!--            <mat-label>Email</mat-label>-->
+<!--            <input matInput type="email" [(ngModel)]="agent.email" name="email">-->
+<!--          </mat-form-field>-->
+<!--          <mat-form-field appearance="fill" class="full-width">-->
+<!--            <mat-label>Confirmation Email</mat-label>-->
+<!--            <input matInput type="email" [(ngModel)]="email" name="confirmEmail">-->
+<!--          </mat-form-field>-->
+<!--          <mat-form-field appearance="fill" class="full-width">-->
+<!--            <mat-label>Numéro de téléphone</mat-label>-->
+<!--            <input matInput type="tel" [(ngModel)]="agent.telephone" name="phone">-->
+<!--          </mat-form-field>-->
+<!--          <mat-form-field appearance="fill" class="full-width">-->
+<!--            <mat-label>N° d'immatriculation</mat-label>-->
+<!--            <input matInput [(ngModel)]="agent.num_immatriculation" name="registrationNumber">-->
+<!--          </mat-form-field>-->
+<!--          <mat-form-field appearance="fill" class="full-width">-->
+<!--            <mat-label>N° de patente</mat-label>-->
+<!--            <input matInput [(ngModel)]="agent.num_patente" name="patentNumber">-->
+<!--          </mat-form-field>-->
+<!--          <mat-form-field appearance="fill" class="full-width">-->
+<!--            <mat-label>Description</mat-label>-->
+<!--            <textarea matInput name="description"></textarea>-->
+<!--          </mat-form-field>-->
+<!--          &lt;!&ndash; <div class="full-width">-->
+<!--            <label for="fileUpload">Fichier</label>-->
+<!--            <input type="file" id="fileUpload" [(ngModel)]="client.cin_recto" name="photo_recto" >-->
+<!--          </div> &ndash;&gt;-->
+<!--        </div>-->
+<!--        <button mat-raised-button color="primary" type="submit">Suivant</button>-->
+<!--      </form>-->
+<!--    </mat-card-content>-->
+<!--  </mat-card>-->
+
+<div class="contact-form">
+  <h2>Entrer Les Informations Agents</h2>
+  <p>Veuillez entrer tous les champs sans exception</p>
+  <form (ngSubmit)="create()">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" [(ngModel)]="agent.lastName" name="lastName" required>
+      </div>
+      <div class="form-group">
+        <label for="prenom">Prénom</label>
+        <input type="text" id="prenom" [(ngModel)]="agent.firstName" name="firstName" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="produit">Sélectionner un produit</label>
+      <select id="produit" [(ngModel)]="agent.cin" name="cin" required>
+        <option value="" disabled selected>Choisissez un produit</option>
+        <option value="CIN">Produit 1</option>
+        <option value="Passport">Carte d'Identité</option>
+        <option value="produit3">Passport</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="piece_identite">N° Pièce d'identité</label>
+      <input type="text" id="piece_identite" [(ngModel)]="agent.num_piece_identite" name="identityNumber" required>
+    </div>
+    <div class="form-group">
+      <label for="date_naissance">Date de naissance</label>
+      <input type="date" id="date_naissance" [(ngModel)]="agent.date_naissance" name="birthDate" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" [(ngModel)]="agent.email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="confirm_email">Confirmation Email</label>
+      <input type="email" id="confirm_email" [(ngModel)]="email" name="confirmEmail" required>
+    </div>
+    <div class="form-group">
+      <label for="telephone">Numéro de téléphone</label>
+      <input type="tel" id="telephone" [(ngModel)]="agent.telephone" name="phone" required>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="immatriculation">N° d'immatriculation</label>
+        <input type="text" id="immatriculation" [(ngModel)]="agent.num_immatriculation" name="registrationNumber">
+      </div>
+      <div class="form-group">
+        <label for="patente">N° de patente</label>
+        <input type="text" id="patente" [(ngModel)]="agent.num_patente" name="patentNumber">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea id="description" name="description" required></textarea>
+    </div>
+    <button type="submit">Soumettre</button>
+  </form>
+</div>
+

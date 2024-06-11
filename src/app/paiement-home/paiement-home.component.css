@@ -1,0 +1,98 @@
+
+  .h2{
+    font-family: 'Kanit', sans-serif;
+  }
+  .inner-card .content {
+    justify-content: space-between; 
+    width: 100px;/* Crée de l'espace entre le texte et l'image */
+  }
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+  }
+  
+  .container .card-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .inner-card {
+    flex: 1 0 calc(30% - 20px); /* Prend environ un tiers de l'espace disponible */
+    margin: 10px; /* Ajoute un peu d'espace autour de chaque carte */
+  }
+  .product-style-2 .single-product {
+    background: #fff none repeat scroll 0 0;
+    margin-bottom: 30px;
+    padding: 15px 15px 25px;
+  }
+  .card-image {
+    width: 50%;
+    height: 50%;
+    /* background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+  }
+
+  .container {
+    margin-left: 50px; /* Ajoute une marge à gauche */
+    margin-right: 50px; /* Ajoute une marge à droite */
+  }
+
+  .content .inner-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    width: 80%;
+    margin: 20px auto;
+  }
+  
+  mat-card-title {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  mat-form-field {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .client-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .full-width {
+    flex: 48%; /* Adjust the width to closely match the design */
+    margin-bottom: 20px; /* Add space below each field */
+  }
+  
+  /* Add margin to the right for the first item in each row to space out pairs */
+  .client-info > mat-form-field:nth-child(odd) {
+    margin-right: 4%;
+  }
+  
+  button {
+    display: block; /* Make the button a block element */
+    margin: 20px auto 0; /* Center the button horizontally and add margin on top */
+    padding: 10px 20px; /* Adjust padding for better appearance */
+  }
+  
+  /* Responsive adjustments if needed */
+  @media (max-width: 768px) {
+    .full-width {
+      flex: 100%; /* Make fields take full width on smaller screens */
+    }
+    .client-info > mat-form-field:nth-child(odd) {
+      margin-right: 0; /* Remove margin right on smaller screens */
+    }
+  }
+  .mat-card {
+    font-family: 'Kanit', sans-serif;
+  }
+  

@@ -1,0 +1,94 @@
+<!--<section class="hero">-->
+<!--  <div class="hero-image">-->
+<!--    <img src="assets/pictures/payement.PNG" alt="Bank Illustration">-->
+<!--  </div>-->
+<!--&lt;!&ndash;  <mat-card class="container">&ndash;&gt;-->
+<!--&lt;!&ndash;    <mat-card-title>Ouverture d'un compte de paiement</mat-card-title>&ndash;&gt;-->
+<!--&lt;!&ndash;    <mat-card-content>&ndash;&gt;-->
+<!--&lt;!&ndash;      <form (ngSubmit)="create()" class="container flex">&ndash;&gt;-->
+<!--&lt;!&ndash;        <mat-form-field appearance="fill">&ndash;&gt;-->
+<!--&lt;!&ndash;          <mat-label>Sélectionner un produit</mat-label>&ndash;&gt;-->
+<!--&lt;!&ndash;          <mat-select matInput id="productSelect" [(ngModel)]="compteClient.typeHissab" name="typeHissab">&ndash;&gt;-->
+<!--&lt;!&ndash;            <mat-option value="Acc_200">Hssab 1 - Plafond: 200 DH</mat-option>&ndash;&gt;-->
+<!--&lt;!&ndash;            <mat-option value="Acc_5000">Hssab 2 - Plafond: 5000 DH</mat-option>&ndash;&gt;-->
+<!--&lt;!&ndash;            <mat-option value="Acc_20000">Hssab 3 - Plafond: 20000 DH</mat-option>&ndash;&gt;-->
+<!--&lt;!&ndash;          </mat-select>&ndash;&gt;-->
+<!--&lt;!&ndash;        </mat-form-field>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <div class="client-info">&ndash;&gt;-->
+<!--&lt;!&ndash;          <mat-form-field appearance="fill" class="full-width ">&ndash;&gt;-->
+<!--&lt;!&ndash;            <mat-label>Prénom</mat-label>&ndash;&gt;-->
+<!--&lt;!&ndash;            <input matInput id="firstName" [(ngModel)]="compteClient.firstName" name="firstName">&ndash;&gt;-->
+<!--&lt;!&ndash;          </mat-form-field>&ndash;&gt;-->
+<!--&lt;!&ndash;          <mat-form-field appearance="fill" class="full-width">&ndash;&gt;-->
+<!--&lt;!&ndash;            <mat-label>Nom</mat-label>&ndash;&gt;-->
+<!--&lt;!&ndash;            <input matInput id="lastName" [(ngModel)]="compteClient.lastName" name="lastName">&ndash;&gt;-->
+<!--&lt;!&ndash;          </mat-form-field>&ndash;&gt;-->
+<!--&lt;!&ndash;          <mat-form-field appearance="fill" class="full-width">&ndash;&gt;-->
+<!--&lt;!&ndash;            <mat-label>Téléphone</mat-label>&ndash;&gt;-->
+<!--&lt;!&ndash;            <input matInput type="tel" id="phone" [(ngModel)]="compteClient.phoneNumber" name="phoneNumber">&ndash;&gt;-->
+<!--&lt;!&ndash;          </mat-form-field>&ndash;&gt;-->
+<!--&lt;!&ndash;          <mat-form-field appearance="fill" class="full-width">&ndash;&gt;-->
+<!--&lt;!&ndash;            <mat-label>Email</mat-label>&ndash;&gt;-->
+<!--&lt;!&ndash;            <input matInput type="email" id="email" [(ngModel)]="compteClient.email" name="email">&ndash;&gt;-->
+<!--&lt;!&ndash;          </mat-form-field>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        <button mat-raised-button color="primary" type="submit">Suivant</button>&ndash;&gt;-->
+<!--&lt;!&ndash;      </form>&ndash;&gt;-->
+<!--&lt;!&ndash;    </mat-card-content>&ndash;&gt;-->
+<!--&lt;!&ndash;  </mat-card>&ndash;&gt;-->
+<!--  <div class="container">-->
+<!--    <h2>Ouverture d'un compte de paiement</h2>-->
+<!--    <form (ngSubmit)="create()" class="container flex">-->
+<!--      <div class="form-group">-->
+<!--        <label for="productSelect">Sélectionner un produit</label>-->
+<!--        <select id="productSelect" [(ngModel)]="compteClient.typeHissab" name="typeHissab">-->
+<!--          <option value="Acc_200">Hssab 1 - Plafond: 200 DH</option>-->
+<!--          <option value="Acc_5000">Hssab 2 - Plafond: 5000 DH</option>-->
+<!--          <option value="Acc_20000">Hssab 3 - Plafond: 20000 DH</option>-->
+<!--        </select>-->
+<!--      </div>-->
+<!--      <div class="client-info">-->
+<!--        <div class="form-group">-->
+<!--          <label for="firstName">Prénom</label>-->
+<!--          <input type="text" id="firstName" [(ngModel)]="compteClient.firstName" name="firstName">-->
+<!--        </div>-->
+<!--        <div class="form-group">-->
+<!--          <label for="lastName">Nom</label>-->
+<!--          <input type="text" id="lastName" [(ngModel)]="compteClient.lastName" name="lastName">-->
+<!--        </div>-->
+<!--        <div class="form-group">-->
+<!--          <label for="phone">Téléphone</label>-->
+<!--          <input type="tel" id="phone" [(ngModel)]="compteClient.phoneNumber" name="phoneNumber">-->
+<!--        </div>-->
+<!--        <div class="form-group">-->
+<!--          <label for="email">Email</label>-->
+<!--          <input type="email" id="email" [(ngModel)]="compteClient.email" name="email">-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <button type="submit">Suivant</button>-->
+<!--    </form>-->
+<!--  </div>-->
+<div class="container">
+  <div class="left-panel">
+    <div class="content">
+      <h1>Assistant de création de compte</h1>
+      <p>Bienvenue dans l'assistant de création de compte. Veuillez suivre les étapes ci-dessous pour configurer votre compte de paiement.</p>
+      <img src="assets/pictures/tele.png" alt="Bank Illustration">
+    </div>
+  </div>
+  <div class="right-panel">
+    <form (ngSubmit)="create()">
+      <h2>Creation De Compte De Payement</h2>
+      <p>Please fill with your details</p>
+      <input type="text" placeholder="First Name" [(ngModel)]="compteClient.firstName" name="firstName" required>
+      <input type="text" placeholder="Last Name" [(ngModel)]="compteClient.lastName" name="lastName" required>
+      <input type="email" placeholder="Your Email" [(ngModel)]="compteClient.email" name="email" required>
+      <input type="tel" placeholder="Your Phone Number" [(ngModel)]="compteClient.phoneNumber" name="phoneNumber" required>
+      <button type="submit">Next</button>
+    </form>
+  </div>
+</div>
+
+
+<!--</section>-->

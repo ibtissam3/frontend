@@ -1,0 +1,87 @@
+<br>
+<mat-card class="container" style="margin: 100px auto; width: 60%; border: 2px solid #808080FF;">
+  <hr style="margin-top: 30px; margin-bottom: 40px; border-color: #808080FF; width: 60%">
+  <form class="container flex" style="text-align: center">
+    <img [src]="this.imagePath" alt="Description de l'image" class="image-left">
+    <div class="client-info">
+      <div class="full-width">
+        <strong>Créance</strong>
+        <span>{{Creance.creditorName}}</span>
+      </div>
+      <div class="full-width" *ngIf="transactionType === 'DONATION'">
+        <strong>Donateur</strong>
+        <span>{{facture.donation.nom_donateur}}</span>
+      </div>
+      <div class="full-width" *ngIf="transactionType === 'RECHARGE'">
+        <strong>Tel rechargé</strong>
+        <span>{{facture.recharge.tel_recharge}}</span>
+      </div>
+      <div class="full-width">
+        <strong>Num transaction </strong>
+        <span>{{facture.transaction.id}}</span>
+      </div>
+      <div class="full-width">
+        <strong>Date Paiment</strong>
+        <span>{{facture.transaction.date | date:'dd/MM/yyyy' }}</span>
+      </div>
+    </div>
+  </form>
+  <hr style="margin-top: 30px; margin-bottom: 40px; border-color: #808080FF; width: 60%">
+  <form class="container flex" style="text-align: center">
+    <div class="client-info">
+      <div class="full-width">
+        <div class="payment-selection" style="margin-top: 20px;margin-left: 170px">
+          <div class="payment-label">Montant de l'opération</div>
+          <div class="payment-amount">{{facture.amount}} DHS</div>
+        </div>
+        <div style="text-align: center; margin-top: 20px; margin-right: 140px">
+          <button mat-raised-button color="danger" class="margin-right" style="background-color: red; color: #ffff" [routerLink]="['/client-home']"> ✓ Valider</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</mat-card>
+
+
+
+<!--<div class="receipt">-->
+<!--  <div class="header">-->
+<!--    <div class="logo">-->
+<!--      <img src="inwi.png" alt="Company Logo">-->
+<!--    </div>-->
+<!--    <div class="contact-info">-->
+<!--      <p>mail@company.com</p>-->
+<!--      <p>www.website.com</p>-->
+<!--      <p>+1234 56 789</p>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="details">-->
+<!--    <div class="row">-->
+<!--      <label>Creancier</label>-->
+<!--      <span>John Doe</span>-->
+<!--    </div>-->
+<!--    <div class="row">-->
+<!--      <label>Creance</label>-->
+<!--      <span>$150.00</span>-->
+<!--    </div>-->
+<!--    <div class="row">-->
+<!--      <label>Donation</label>-->
+<!--      <span>$50.00</span>-->
+<!--    </div>-->
+<!--    <div class="row">-->
+<!--      <label>Recharge</label>-->
+<!--      <span>$50.00</span>-->
+<!--    </div>-->
+<!--    <div class="row">-->
+<!--      <label>Facture</label>-->
+<!--      <span>$50.00</span>-->
+<!--    </div>-->
+<!--    <div class="row">-->
+<!--      <label>Total</label>-->
+<!--      <span>$200.00</span>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="signature">-->
+<!--    <p>Authorized Signature</p>-->
+<!--  </div>-->
+<!--</div>-->

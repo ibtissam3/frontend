@@ -1,0 +1,71 @@
+.form-container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+mat-card-title, mat-card-subtitle {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Ensures that form rows wrap on smaller screens */
+}
+
+.form-group {
+  flex-basis: 48%;
+  margin-bottom: 20px; /* Ensures consistent spacing between form groups */
+}
+
+.file-upload {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Adds space between the label and the button */
+}
+
+.file-upload button {
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.file-upload input {
+  display: none;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center; /* Center align the buttons */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+}
+
+button[color="warn"] {
+  background-color: #f8d7da; /* Light red background for 'Annuler' button */
+  color: #721c24; /* Dark red text color */
+}
+
+input:focus, button:focus {
+  outline: none;
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+input::placeholder {
+  font-style: italic;
+}
+.yellow-button {
+  background-color: yellow !important;
+  color: black !important; /* Change the text color to black or any color that is visible on a yellow background */
+}

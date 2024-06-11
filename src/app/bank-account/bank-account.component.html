@@ -1,0 +1,14 @@
+<div *ngIf="bankAccount == null; else bankAccountInfo">
+    <p>Vous n'avez pas encore liée votre compte à un compte bancaire</p>
+    <div class="form-group">
+        <label for="accountNumber">Numéro de compte</label>
+        <input type="text" class="form-control" id="accountNumber" [(ngModel)]="account_number" placeholder="Entrez votre numéro de compte">
+    </div>
+    <button type="button" class="btn btn-primary" (click)="associateAccount()">Associer le compte</button>
+</div>
+
+<ng-template #bankAccountInfo>
+    <p>Informations sur le compte bancaire :</p>
+        <p> Numero du compte : {{bankAccount.accountNumber}}</p>
+        <p>Solde du compte: {{bankAccount.balance}}</p>
+</ng-template>

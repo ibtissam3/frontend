@@ -1,0 +1,22 @@
+<br>
+<br>
+<br>
+
+<mat-card class="container">
+    <mat-card-title style="text-align: center;">Vos factures Impayées</mat-card-title>
+    <mat-card-content>
+      <table class="container flex">
+        <tr>
+          <th>Réference de la facture</th>
+          <th>Description</th>
+          <th>Montant</th>
+        </tr>
+        <tr *ngFor="let impaye of impayes" >
+          <td>{{impaye.id}}</td>
+          <td>{{impaye.description}}</td>
+          <td>{{impaye.montant}}</td>
+          <td><button mat-raised-button color="primary" (click)="payer(impaye.id)">Valider</button></td>
+        </tr>
+      </table>
+    </mat-card-content>
+</mat-card>

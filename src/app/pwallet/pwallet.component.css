@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.main {
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.35s ease-in-out;
+  background-color: #f0f4f8;
+}
+
+#sidebar {
+  width: 70px;
+  min-width: 70px;
+  z-index: 1000;
+  transition: all .25s ease-in-out;
+  background-color: #7c6824; /* Light peach color for sidebar */
+  display: flex;
+  flex-direction: column;
+}
+
+#sidebar.expand {
+  width: 260px;
+  min-width: 260px;
+}
+
+.toggle-btn {
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+  padding: 1rem 1.5rem;
+}
+
+.toggle-btn i {
+  font-size: 1.5rem;
+  color: #f0f4f8; /* Black for better contrast */
+}
+
+.sidebar-logo {
+  margin: auto 0;
+}
+
+.sidebar-logo a {
+  color: #f0f4f8; /* Black for better contrast */
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+#sidebar:not(.expand) .sidebar-logo,
+#sidebar:not(.expand) a.sidebar-link span {
+  display: none;
+}
+
+.sidebar-nav {
+  padding: 2rem 0;
+  flex: 1 1 auto;
+}
+
+a.sidebar-link {
+  padding: .625rem 1.625rem;
+  color: #f0f4f8; /* Black for better contrast */
+  display: block;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  border-left: 3px solid transparent;
+}
+
+.sidebar-link i {
+  font-size: 1.1rem;
+  margin-right: .75rem;
+  color: #f0f4f8; /* Black for better contrast */
+}
+
+a.sidebar-link:hover {
+  background-color: rgba(255, 255, 255, .1); /* Slightly more opaque for better visibility */
+  border-left: 3px solid #ecc440;
+}
+
+.sidebar-item {
+  position: relative;
+}
+
+#sidebar:not(.expand) .sidebar-item .sidebar-dropdown {
+  position: absolute;
+  top: 0;
+  left: 70px;
+  background-color: #ecc440; /* Match sidebar color */
+  padding: 0;
+  min-width: 15rem;
+  display: none;
+}
+
+#sidebar:not(.expand) .sidebar-item:hover .has-dropdown+.sidebar-dropdown {
+  display: block;
+  max-height: 15em;
+  width: 100%;
+  opacity: 1;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"]::after {
+  border: solid;
+  border-width: 0 .075rem .075rem 0;
+  content: "";
+  display: inline-block;
+  padding: 2px;
+  position: absolute;
+  right: 1.5rem;
+  top: 1.4rem;
+  transform: rotate(-135deg);
+  transition: all .2s ease-out;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"].collapsed::after {
+  transform: rotate(45deg);
+  transition: all .2s ease-out;
+}
+
+.content {
+  padding: 20px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.btn {
+  margin-right: 10px;
+}
+
+/*//contenu de src/app/client-home/client-home.component.css*/
+.client-content {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #ecc440;
+}
+
+.dashboard-cards {
+  display: flex;
+  justify-content: space-between; /* Space between cards */
+  padding: 20px; /* Add padding if needed */
+}
+
+.dashboard-card {
+  width: 300px;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  background-color: #e0f7fa;
+}
+
+/* css de carte bancaire */
+.card-container {
+  background: #ecc440;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px; /* Adjusted max-width */
+  position: relative;
+  box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.1);
+  border-bottom: 6px solid #ecc440;
+  border-right: 6px solid #ecc440;
+  margin-top: 60px;
+}
+
+.card {
+  position: relative;
+  padding-top: 60%;
+  overflow: hidden;
+  justify-content: center;
+  background-color: #ecc440;
+}
+
+.chip {
+  position: absolute;
+  top: 35%;
+  left: 5%;
+  height: 23%;
+}
+
+.contactless {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  height: 15%;
+  transform: rotate(90deg);
+}
+
+.visa {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  height: 30%;
+}
+
+.card-number {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  font-size: 2.5rem;
+  font-family: sans-serif;
+  color: white;
+  text-shadow: 0px 0px 5px black;
+}
+
+.arrow {
+  position: absolute;
+  top: 80%;
+  left: 5%;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 17px solid white;
+}
+
+.card-name, .card-expire {
+  position: absolute;
+  left: 10%;
+  font-family: sans-serif;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 3px black;
+}
+
+.card-name {
+  top: 74%;
+  font-size: 1.3rem;
+}
+
+.card-expire {
+  top: 82%;
+  font-size: 1rem;
+}
+
+.bank-name {
+  margin: 0;
+  display: inline-block;
+  padding: 10px 20px;
+  padding-left: 5%;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  color: black;
+  font-weight: bold;
+  background-color: white;
+  min-width: 30%;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  background-color: white;
+  width: 50%;
+  height: 5%;
+  left: 0;
+  top: 26%;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  opacity: 0.5;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: white;
+  width: 200px;
+  height: 200px;
+  right: -75px;
+  top: -75px;
+  border-radius: 50%;
+  opacity: 0.05;
+}
+
+/* New styles for the graph */
+.graph-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.1);
+}
+
+.graph {
+  width: 100%;
+  height: auto;
+}
+
+/* Test*/
+/*.chart-container {*/
+/*  width: 600px;*/
+/*  height: 400px;*/
+/*  display: flex;*/
+/*  align-items: flex-end;*/
+/*  margin: 50px;*/
+/*  background-color: #ecf0f1;*/
+/*  border-radius: 8px;*/
+/*  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+/*}*/
+/*.bar {*/
+/*  width: 80px;*/
+/*  background-color: #3498db;*/
+/*  margin: 0 10px;*/
+/*  transition: background-color 0.3s ease;*/
+/*  cursor: pointer;*/
+/*}*/
+/*.bar:hover {*/
+/*  background-color: #2980b9;*/
+/*}*/
+/*.bar span {*/
+/*  display: none;*/
+/*  position: absolute;*/
+/*  bottom: 100%;*/
+/*  left: 50%;*/
+/*  transform: translateX(-50%);*/
+/*  padding: 6px;*/
+/*  border-radius: 4px;*/
+/*  background-color: #333;*/
+/*  color: #fff;*/
+/*  font-size: 14px;*/
+/*  white-space: nowrap;*/
+/*}*/
+/*.bar:hover span {*/
+/*  display: block;*/
+/*}*/

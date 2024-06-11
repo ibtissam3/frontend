@@ -1,0 +1,88 @@
+<div class="wrapper">
+    <aside id="sidebar" [class.expand]="isExpanded">
+      <div class="d-flex">
+        <button class="toggle-btn" type="button" (click)="toggleSidebar()">
+          <i class="lni lni-grid-alt"></i>
+        </button>
+        <div class="sidebar-logo">
+          <a href="#">Main dashboard</a>
+        </div>
+      </div>
+      <ul class="sidebar-nav">
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link">
+            <i class="lni lni-user"></i>
+            <span>Profile</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a routerLink="/historique" class="sidebar-link">
+            <i class="bi bi-arrow-counterclockwise"></i>
+            <span>Historique</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+             [attr.data-bs-target]="'#auth'" aria-expanded="false" aria-controls="auth">
+            <i class="bi bi-credit-card-2-front"></i>
+            <span>Opereations</span>
+          </a>
+          <ul id="auth" class="sidebar-dropdown list-unstyled collapse">
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link" routerLink="/bill">Effectuer un paiement</a>
+            </li>
+          </ul>
+        </li>
+  
+        <li class="sidebar-item">
+          <a routerLink="/graphe" class="sidebar-link">
+            <i class="lni lni-popup"></i>
+            <span>Graphe</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link">
+            <i class="lni lni-cog"></i>
+            <span>Setting</span>
+          </a>
+        </li>
+      </ul>
+      <div class="sidebar-footer">
+        <a href="#" class="sidebar-link">
+          <i class="lni lni-exit"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+    <div class="main p-3">
+      <div class="text-center">
+        <div class="container">
+          <div class="client-content">
+            <h1>Bienvenue, {{client.firstName}}</h1>
+            <div class="dashboard-cards">
+              <div class="card-container">
+                <div class="card">
+                  <img class="chip" src="../../assets/pictures/ship-2.png" />
+                  <img class="visa" src="../../assets/pictures/visa-2.png" />
+                  <p class="card-number" style="margin-top: 40px; text-align: center;">{{client.comptePaiement.accountBalance}} DHS</p>
+                  <div class="arrow"></div>
+                  <p class="card-name">{{client.firstName}}</p>
+                  <p class="card-expire">{{client.telephone}}</p>
+                  <p class="bank-name">Solde Bancaire</p>
+                </div>
+              </div>
+  <!--            <div class="chart-container">-->
+  <!--              <div class="bar" style="height: 100px;"><span>Jan: 100</span></div>-->
+  <!--              <div class="bar" style="height: 150px;"><span>Fév: 150</span></div>-->
+  <!--              <div class="bar" style="height: 200px;"><span>Mar: 200</span></div>-->
+  <!--              <div class="bar" style="height: 250px;"><span>Avr: 250</span></div>-->
+  <!--              <div class="bar" style="height: 300px;"><span>Mai: 300</span></div>-->
+  <!--              &lt;!&ndash; Continuez à ajouter des barres pour d'autres mois &ndash;&gt;-->
+  <!--            </div>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

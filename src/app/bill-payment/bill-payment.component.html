@@ -1,0 +1,61 @@
+<mat-card class="container">
+  <mat-card-title>Paiement de facture</mat-card-title>
+  <mat-tab-group>
+    <mat-tab label="Liste des créanciers">
+      <div class="filter">
+        <mat-form-field appearance="fill">
+          <mat-label>Toutes les catégories</mat-label>
+          <mat-select>
+            <mat-option value="all">Toutes les catégories</mat-option>
+            <!-- Ajoutez d'autres options ici -->
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <!--      <div class="creditors-list">-->
+      <!--        <div *ngFor="let creditor of creanciers" class="creditor-card">-->
+      <!--          <mat-card>-->
+      <!--            <img mat-card-image [src]="creditor.image">-->
+      <!--            <mat-card-content>-->
+      <!--              <h3>{{creditor.creditorName}}</h3>-->
+      <!--              <p  *ngFor="let debt of creditor.listCreances">-->
+      <!--                <a [routerLink]="['form',debt.type ,debt.codeDebt]">-->
+      <!--                {{debt.debtName}}-->
+      <!--              </a>-->
+      <!--              </p>-->
+      <!--            </mat-card-content>-->
+      <!--          </mat-card>-->
+      <!--        </div>-->
+      <!--      </div>-->
+      <div class="card-container">
+        <div *ngFor="let creditor of creanciers" class="card">
+          <img [src]="creditor.image" class="card-img-top" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{creditor.creditorName}}</h5>
+            <p *ngFor="let debt of creditor.listCreances" class="card-text">
+              <a class="btn btn-primary" (click)="onLinkClick(debt,creditor.image)">{{debt.debtName}}</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--      <div class="parent">-->
+      <!--        <div class="card">-->
+      <!--          <div *ngFor="let creditor of creanciers" class="content-box">-->
+      <!--            <span class="card-title">{{creditor.creditorName}}</span>-->
+      <!--            <p *ngFor="let debt of creditor.listCreances" class="card-content">-->
+      <!--              <a [routerLink]="['form',debt.type ,debt.codeDebt]">-->
+      <!--                {{debt.debtName}}-->
+      <!--              </a>-->
+      <!--            </p>-->
+      <!--            <span class="see-more">See More</span>-->
+      <!--            <div class="date-box">-->
+      <!--              <img [src]="creditor.image" alt="Card Image" class="card-image">-->
+      <!--            </div>-->
+      <!--          </div>-->
+      <!--        </div>-->
+      <!--      </div>-->
+    </mat-tab>
+    <mat-tab label="Historique">
+      <!-- Contenu de l'historique -->
+    </mat-tab>
+  </mat-tab-group>
+</mat-card>

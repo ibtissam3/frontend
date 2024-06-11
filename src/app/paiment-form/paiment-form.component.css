@@ -1,0 +1,46 @@
+.container {
+  width: 80%;
+  margin: 20px auto;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-top: 20px;
+}
+.full-width {
+  flex: 48%; /* Adjust the width to closely match the design */
+  margin-bottom: 20px; /* Add space below each field */
+}
+/* Add margin to the right for the first item in each row to space out pairs */
+.client-info > mat-form-field:nth-child(odd) {
+  margin-right: 4%;
+}
+.inner-card {
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex; /* Ajouté pour disposer les enfants en ligne */
+}
+.container.flex {
+  justify-content: center;
+}
+
+.image-left {
+  order: -1;
+}
+.left {
+  flex: 0 0 200px; /* Ajouté pour s'assurer que le div contenant l'image ne prend pas plus de 200px de largeur */
+}
+
+.card-img {
+  max-width: 100%; /* Ajouté pour s'assurer que l'image ne dépasse pas son conteneur */
+}
+
+.form {
+  flex: 1; /* Ajouté pour s'assurer que le div contenant les inputs prend le reste de l'espace disponible */
+}
+.mat-card {
+  font-family: 'Kanit', sans-serif;
+}
+.margin-right {
+  margin-right: 20px;
+}

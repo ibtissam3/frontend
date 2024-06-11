@@ -1,0 +1,36 @@
+<div class="wrapper">
+  <aside id="sidebar" [class.expand]="isExpanded">
+    <div class="d-flex">
+      <button class="toggle-btn" type="button" (click)="toggleSidebar()">
+        <i class="lni lni-grid-alt"></i>
+      </button>
+      <div class="sidebar-logo">
+        <a href="#">Main dashboard</a>
+      </div>
+    </div>
+    <!-- Votre barre de navigation latérale ici -->
+  </aside>
+  <div class="container">
+    <h1>Transactions du Client</h1>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>Montant</th>
+        <th>Date</th>
+        <th>Status</th>
+        <th>Type</th> <!-- Ajout de la colonne pour le type de transaction -->
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let transaction of transactions">
+        <td>{{ transaction.id }}</td>
+        <td>{{ transaction.montant }}</td>
+        <td>{{ transaction.date | date:'dd/MM/yyyy' }}</td>
+        <td>{{ transaction.status }}</td>
+        <td>{{ transaction.type }}</td> <!-- Affichage du type de transaction -->
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

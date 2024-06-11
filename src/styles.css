@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
+@import "~bootstrap/dist/css/bootstrap.css";
+html, body { height: 100%;
+}
+body {
+  margin: 0;
+  font-family: 'Kanit', sans-serif;
+
+}
+
+body::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+.kanit-thin {
+  font-family: "Kanit", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+
+.bg {
+  /*background-color: #29549d;*/
+  /*height: 100%;*/
+  /*background-position: center;*/
+  /*background-repeat: no-repeat;*/
+  /*background-size: cover;*/
+  /*background-attachment: fixed;*/
+}
+
+::selection {
+  background: rgba(255, 255, 0, 0.589);
+  color: black;
+  text-shadow: none;
+}
+

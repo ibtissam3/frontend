@@ -1,0 +1,19 @@
+<mat-card class="container">
+    <mat-card-title style="text-align: center;">Enter a Code</mat-card-title>
+    <mat-card-content>
+      <form class="container flex">
+        <div class="client-info">
+          <mat-form-field appearance="fill" class="full-width ">
+            <mat-label>Code</mat-label>
+            <input matInput id="code" [(ngModel)]="code" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+        </div>
+        <div *ngIf="type === 'RECHARGE'" style="text-align: center;">
+          <button color="danger" class="margin-right" (click)="recharge()"> ✓ Vérifier</button>
+        </div>
+        <div *ngIf="type === 'DONATION'" style="text-align: center;">
+            <button color="danger" class="margin-right" (click)="donation()"> ✓ Vérifier</button>
+        </div>
+      </form>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,21 @@
+.full-width {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Pour aligner verticalement le contenu */
+  padding: 10px 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+.full-width strong {
+  flex: 1; /* Pour que le label prenne autant d'espace que possible */
+  font-weight: bold;
+  color: #70726e;
+  margin-right: 10px; /* Pour créer un espace entre le label et le span */
+}
+
+.full-width span {
+  flex: 1; /* Pour que le span prenne autant d'espace que possible */
+  color: #555;
+  text-align: right;
+  margin-right: 140px;
+}

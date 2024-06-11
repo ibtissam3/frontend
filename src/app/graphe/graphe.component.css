@@ -1,0 +1,89 @@
+.graph-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 600px; /* Limite la largeur du graphique */
+}
+
+.chart-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  display: flex;
+}
+
+.base {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #3c76b9;
+}
+
+.meter {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.meter li div {
+  font-size: 14px;
+  color: #000;
+}
+
+table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+}
+
+table td {
+  border: 1px solid #ddd;
+}
+
+.bar {
+  width: 45%;
+  position: absolute;
+  bottom: 2px;
+}
+
+.bar.incoming {
+  left: 10%;
+  background-color: #4CAF50; /* Couleur pour les transactions entrantes */
+}
+
+.bar.outgoing {
+  right: 10%;
+  background-color: #f44336; /* Couleur pour les transactions sortantes */
+}
+
+/* Legend Styles */
+.legend {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.color-box {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.color-box.incoming {
+  background-color: #4CAF50;
+}
+
+.color-box.outgoing {
+  background-color: #f44336;
+}
